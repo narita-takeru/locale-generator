@@ -1,15 +1,15 @@
 # Locale Generator
 
 
-Output the translation file used by next-i18next from csv.
+Output the translation file used by next-i18next from tsv.
 
 ## Usage
 
 ```
-npx locale-generator (csv path) (output dir)
+npx locale-generator (tsv path) (output dir)
 ```
 
-##### csv format
+##### tsv format
 
 ```
 _key,en,ja
@@ -22,7 +22,7 @@ buttonB.name,sign up,新規登録
 
 ```
 mkdir locales
-npx locale-generator example.csv locales
+npx locale-generator example.tsv locales
 ```
 
 ## Results
