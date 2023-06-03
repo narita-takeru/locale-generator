@@ -1,0 +1,27 @@
+{
+  "name": "locale-generator",
+  "version": "0.9.0",
+  "description": "nextjs i18n json files generator from csv file.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nextjs",
+    "next-i18next"
+  ],
+  "author": "narita-takeru",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narita-takeru/locale-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/narita-takeru/locale-generator/issues"
+  },
+  "homepage": "https://github.com/narita-takeru/locale-generator#readme"
+}
