@@ -1,14 +1,13 @@
 {
   "name": "locale-generator",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "nextjs i18n json files generator from csv file.",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "locale-generator": "./src/index.js"
+    "locale-generator": "./bin/index.js"
   },
   "keywords": [
     "nextjs",
