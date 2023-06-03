@@ -1,29 +1,29 @@
 # Locale Generator
 
 
-Output the translation file used by next-i18next from tsv.
-tsv encoding is utf8.
+Output the translation file used by next-i18next from csv.
+csv encoding is utf8.
 
 ## Usage
 
 ```
-npx locale-generator (tsv path) (output dir)
+npx locale-generator (csv path) (output dir)
 ```
 
-##### tsv format
+##### csv format
 
 ```
 _key,en,ja
-pageTitle	Mypage	マイページ
-buttonA.name	sign in	ログイン
-buttonB.name	sign up	新規登録
+pageTitle,Mypage,マイページ
+buttonA.name,sign in,ログイン
+buttonB.name,sign up,新規登録
 ```
 
 ##### example
 
 ```
 mkdir locales
-npx locale-generator example.tsv locales
+npx locale-generator example.csv locales
 ```
 
 ## Results
