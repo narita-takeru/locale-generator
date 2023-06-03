@@ -25,7 +25,7 @@ const headers = {}
 
 const headerRow = lines[0].split("\t")
 for (let i = 0; i < headerRow.length; i++) {
-  headers[i] = headerRow[i]
+  headers[i] = headerRow[i].trim() // remove bom.
 }
 
 const records = []
