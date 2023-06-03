@@ -1,8 +1,22 @@
 import * as fs from 'fs'
 import { parse } from 'csv-parse/sync'
 
+if (4 !== process.argv.length) {
+  console.error('require two arguments. [csv path], [outout directory]')
+  process.exit(1)
+}
+
 const csvPath = process.argv[2]
+if (csvPath.length <= 0) {
+  console.error('csv path is required.')
+  process.exit(1)
+}
+
 const basePath = process.argv[3]
+if (basePath.length <= 0) {
+  console.error('output directory is required.')
+  process.exit(1)
+}
 
 const countryMap = {}
 
@@ -11,7 +25,6 @@ const data = fs.readFileSync(csvPath)
 const records = parse(data, { columns: true })
 for (const record of records) {
   const key = record['_key']
-  console.log(key)
   delete record['_key']
 
   const countryKeys = Object.keys(record)
