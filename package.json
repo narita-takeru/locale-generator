@@ -1,6 +1,6 @@
 {
   "name": "locale-generator",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "nextjs i18n json files generator from csv file.",
   "type": "module",
   "scripts": {
