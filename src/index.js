@@ -1,5 +1,4 @@
 import * as fs from 'fs'
-import { parse } from 'tsv-parse/sync'
 
 if (4 !== process.argv.length) {
   console.error('require two arguments. [tsv path], [outout directory]')
@@ -20,9 +19,29 @@ if (basePath.length <= 0) {
 
 const countryMap = {}
 
-const parser = parse()
-const data = fs.readFileSync(tsvPath)
-const records = parse(data, { columns: true, delimiter: "\t" })
+const data = fs.readFileSync(tsvPath).toString()
+const lines = data.split("\n")
+const headers = {}
+
+const headerRow = lines[0].split("\t")
+for (let i = 0; i < headerRow.length; i++) {
+  headers[i] = headerRow[i]
+}
+
+const records = []
+for (let i = 1; i < lines.length; i++) {
+  const line = lines[i].trim()
+  const tokens = line.split("\t")
+  const record = {}
+  for (let j = 0; j < tokens.length; j++) {
+    const token = tokens[j]
+    const index = headers[j]
+    record[index] = token
+  }
+
+  records.push(record)
+}
+
 for (const record of records) {
   const key = record['_key']
   delete record['_key']

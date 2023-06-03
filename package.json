@@ -1,6 +1,6 @@
 {
   "name": "locale-generator",
-  "version": "0.9.9a",
+  "version": "0.9.9b",
   "description": "nextjs i18n json files generator from csv file.",
   "type": "module",
   "scripts": {
@@ -15,9 +15,6 @@
   ],
   "author": "narita-takeru",
   "license": "ISC",
-  "dependencies": {
-    "csv-parse": "^5.4.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/narita-takeru/locale-generator.git"
