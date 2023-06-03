@@ -2,6 +2,7 @@
 
 
 Output the translation file used by next-i18next from tsv.
+tsv encoding is utf8.
 
 ## Usage
 
@@ -13,9 +14,9 @@ npx locale-generator (tsv path) (output dir)
 
 ```
 _key,en,ja
-pageTitle,Mypage,マイページ
-buttonA.name,sign in,ログイン
-buttonB.name,sign up,新規登録
+pageTitle	Mypage	マイページ
+buttonA.name	sign in	ログイン
+buttonB.name	sign up	新規登録
 ```
 
 ##### example

@@ -44,6 +44,6 @@ for (let i = 0; i < countries.length; i++) {
     fs.mkdirSync(parentPath)
   }
 
-  fs.writeFileSync(`${parentPath}/common.json`, json, { charset: 'utf8' })
+  fs.writeFileSync(`${parentPath}/common.json`, json)
 }
 
